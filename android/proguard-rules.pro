@@ -1,0 +1,1 @@
+-keep class com.diyar.device_integrity_signature.** { *; }

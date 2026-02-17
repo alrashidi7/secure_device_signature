@@ -1,0 +1,41 @@
+name: secure_device_signature
+description: Generates a persistent, hardware-bound device signature with root/jailbreak, emulator, and debug detection. Survives app uninstall/reinstall. Optional biometric signing with device binding.
+version: 1.0.0
+homepage: https://github.com/your-org/secure_device_signature
+repository: https://github.com/your-org/secure_device_signature
+issue_tracker: https://github.com/your-org/secure_device_signature/issues
+documentation: https://github.com/your-org/secure_device_signature#readme
+topics:
+  - security
+  - device-integrity
+  - biometrics
+  - signature
+  - root-detection
+  - jailbreak-detection
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.38.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_root_jailbreak_checker: ^2.1.4
+  crypto: ^3.0.3
+  biometric_signature: ^8.1.1
+  path_provider: ^2.1.4
+  path: ^1.9.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.diyar.device_integrity_signature
+        pluginClass: DeviceIntegritySignaturePlugin
+      ios:
+        pluginClass: DeviceIntegritySignaturePlugin
